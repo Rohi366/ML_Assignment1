@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Screenshots (not needed in repo)
+*.png
+
+# Environment
+.env
+venv/
