@@ -55,7 +55,7 @@ def infer_var2(test_path=TEST_VAR2, output_path=PRED_VAR2):
         alpha = float(saved['alpha'])
         print(f"  Loaded params: degree={degree}, alpha={alpha:.4f}")
     else:
-        degree, alpha = 11, 0.8111
+        degree, alpha = 12, 1.2328
         print(f"  Using fallback params: degree={degree}, alpha={alpha:.4f}")
 
     poly = PolynomialFeatures(degree=degree, include_bias=False)

@@ -3,7 +3,7 @@ Polynomial Prediction Functions for IMT2024042 (VAR1 and VAR2)
 
 Provides pure NumPy/Python evaluation functions for the exact fitted polynomials:
 - VAR1: Degree 5 polynomial across 6 operational parameters
-- VAR2: Degree 11 polynomial across 3 spatial coordinates
+- VAR2: Degree 12 polynomial across 3 spatial coordinates
 
 NOTE: Coefficients are stored in the original (unscaled) feature space.
 During training, StandardScaler is applied to polynomial features before
@@ -104,7 +104,7 @@ def predict_var1_matrix(X):
 
 def predict_var2(x1, x2, x3):
     """
-    Evaluate the fitted Degree-11 Polynomial for VAR2 (Thermal Reservoir Mapping).
+    Evaluate the fitted Degree-12 Polynomial for VAR2 (Thermal Reservoir Mapping).
 
     Parameters
     ----------
@@ -170,7 +170,7 @@ def print_top_terms(var='var1', top_n=15):
     """Print the intercept and top N most influential polynomial terms."""
     inter, terms = get_polynomial_terms(var)
     sorted_terms = sorted(terms, key=lambda t: abs(t['weight']), reverse=True)
-    name = "VAR1 (Degree 5)" if var == 'var1' else "VAR2 (Degree 11)"
+    name = "VAR1 (Degree 5)" if var == 'var1' else "VAR2 (Degree 12)"
     print(f"\n{'='*60}")
     print(f"  {name} Polynomial Representation")
     print(f"{'='*60}")
